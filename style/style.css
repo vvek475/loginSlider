@@ -27,8 +27,8 @@ body{
     width: 800px;
 }
 .login{
-    position:relative;
-    height: 500px;
+
+    height: 550px;
     width: 400px;
     background-color: var(--white);  
     transition: 5s;
@@ -49,10 +49,9 @@ body{
     justify-content: center;
     flex-direction: column;
     transition: 5s;
-    height: 500px;
+    height: 550px;
     width: 400px; 
     background-color: var(--white);
-
     background: linear-gradient(145deg, var(--shadow1), var(--white));
     box-shadow:  -5px 5px 10px var(--shadow2),
              -5px -5px 10px var(--white);
@@ -83,61 +82,29 @@ body{
     height:450px;
 }
 .activelogin{
-    animation: loginslide 4s;
-    left:-400px
-
-}
-@keyframes loginslide{
-    0%{
-        left: 0px;
-    }
-    100%{
-        left: -400px;
-    }
+    animation: loginslide 4s linear;
+    margin-left:-800px
 }
 .activeslide{
     z-index: 1;
-    left: 400px;
-    animation: slideslide 4s;
-}
-@keyframes slideslide{
-    0%{
-        left: 0px;
-    }
-    100%{
-        left: 400px;
-    }
+    margin-left: 400px;
+    animation: slideslide 4s linear;
 }
 .reverselogin{
-    left: 0px;
+    margin-left: 0px;
     animation: reverselogin 4s;
-}
-@keyframes reverselogin{
-    0%{
-        left: -400px;
-    }
-    100%{
-        left: 0px;
-    }
 }
 .reverseslide{
     animation: reverseslide 4s;
     z-index: 1;
 }
-@keyframes reverseslide{
-    0%{
-        left: 400px;
-    }
-    100%{
-        left: 0px;
-    }
-}
+
 .log{
     background-color: #ff0066;
     font-weight: 600;
     color: var(--white);
     padding:5px 20px;
-    font-size:32px ;
+    font-size:28px ;
 }
 .log:hover{
     /* font-size: 33px; */
@@ -146,7 +113,6 @@ body{
     background-color: var(--white);
     color: var(--main-color);
     border: 1px solid var(--main-color);
-    z-index: 1;
 }
 .name_field{
     width: 100%;
@@ -234,6 +200,7 @@ button:hover{
     border: 1px solid var(--main-color);
 }
 .end{
+    position: relative;
     display: flex;
     height: 100px;
     justify-content: center;
@@ -244,11 +211,70 @@ button:hover{
     font-weight: 600;
     
 }
-.end p{
+.typer{
+    height: 30px;
+    width: 3px;
+    background-color: white;
+    border-left: 5px solid var(--main-color);
+    animation:typing 5s linear infinite;
+    z-index:1;
+    overflow: hidden;
+}
+.end p{ 
     color: var(--main-color);
-
 }
 /* border-radius: 0px;
 background: linear-gradient(225deg, #e6e6e6, #ffffff);
 box-shadow:  -5px 5px 10px #c2c2c2,
              5px -5px 10px #ffffff; */
+@media (max-width:575px){
+    .form{
+        width: 100vw;
+        align-items: center;
+    }
+    .login{
+        height:250px;
+        width: 50%;
+    }
+    .slide{
+        height:250px;
+        width: 50%;
+    }
+    .user{
+        
+        display: none;
+    }
+    #name,#email{
+        width: 100%;
+    }
+    #name p,#email p{
+        width: 80%;
+        font-size: 10px;
+    }
+    #name div button,#email div button{
+        padding: 2px 10px;
+        font-size: 10px;
+    }
+    #name h4,#email h4{
+        margin-top: 80px;
+        font-size: 15px;
+    }
+    #name h4:hover,#email h4:hover{
+        letter-spacing: 0px;
+    }
+    .slide img{
+        width: 100px;
+        height: 120px;
+    }
+    .hiyo{
+        font-size: 12px;
+    }
+    .btns{
+        flex-direction: row;
+    }
+    .signup{
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 18px;
+    }
+}

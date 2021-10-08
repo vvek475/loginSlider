@@ -1,0 +1,58 @@
+@keyframes loginslide{
+    0%{margin-left: 0px;}
+    100%{margin-left: -800px;}
+}
+@keyframes slideslide{
+    0%{margin-left: 0px;}
+    100%{margin-left: 400px;}
+}
+@keyframes reverselogin{
+    0%{left: -400px;}
+    100%{left: 0px;}
+}
+@keyframes reverseslide{
+    0%{left: 0px;}
+    100%{left: 0px;}
+}
+@keyframes typing{
+    0%,100%{width: 300px;
+            margin-left: -230px;}
+    50%{width: 3px;
+        margin-left: 0px;}
+}
+/* media queries for animation */
+@media (max-width:575px){
+    .activelogin{
+        left: 0;
+        margin-left: -100%;
+    }
+    .reverselogin{
+        left: 0;
+        margin-left: 0%;
+    }
+    .activeslide{
+        left: 0;
+        margin-left: 50%;
+    }
+    .reverseslide{
+        left: 0;
+        margin-left: 0%;
+    }
+    @keyframes loginslide{
+        0%{margin-left: 0%;}
+        100%{margin-left: -100%;}
+    }
+    @keyframes slideslide{
+        0%{margin-left: 0%;}
+        100%{margin-left: 50%;}
+    }
+    @keyframes reverselogin{
+        0%{margin-left: -100%;}
+        100%{margin-left: 0%;}
+    }
+    @keyframes reverseslide{
+        0%{margin-left: 50%;}
+        100%{margin-left: 0%;}
+    }
+    
+}

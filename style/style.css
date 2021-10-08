@@ -235,7 +235,7 @@ button:hover{
 }
 .end{
     display: flex;
-    height: 200px;
+    height: 100px;
     justify-content: center;
     align-items: flex-end;
     color: grey;

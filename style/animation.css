@@ -16,9 +16,9 @@
 }
 @keyframes typing{
     0%,100%{width: 300px;
-            margin-left: -230px;}
+            margin-left: -235px;}
     50%{width: 3px;
-        margin-left: 0px;}
+        margin-left: 2px;}
 }
 /* media queries for animation */
 @media (max-width:575px){

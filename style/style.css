@@ -92,10 +92,10 @@ body{
 }
 .reverselogin{
     margin-left: 0px;
-    animation: reverselogin 4s;
+    animation: reverselogin 4s linear;
 }
 .reverseslide{
-    animation: reverseslide 4s;
+    animation: reverseslide 4s linear;
     z-index: 1;
 }
 

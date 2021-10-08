@@ -1,0 +1,248 @@
+:root{
+    --main-color:#ff0066;
+    --white:white/* rgb(0,0,0) */;
+    --shadow1:#e6e6e6;/*rgb(0,0,0);*/
+    --shadow2:#c2c2c2;/* rgb(0,0,0); */
+}
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+html{
+    background-color:var(--white);
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    height: 500px;
+    width: 800px;
+}
+.login{
+    position:relative;
+    height: 500px;
+    width: 400px;
+    background-color: var(--white);  
+    transition: 5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px;
+    background: linear-gradient(225deg, var(--shadow1), var(--white));
+    box-shadow:  -5px 5px 10px var(--shadow2),
+             5px -5px 10px var(--white);
+}
+.slide{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 5s;
+    height: 500px;
+    width: 400px; 
+    background-color: var(--white);
+
+    background: linear-gradient(145deg, var(--shadow1), var(--white));
+    box-shadow:  -5px 5px 10px var(--shadow2),
+             -5px -5px 10px var(--white);
+}
+.user{
+    position: relative;
+    width: 15rem;
+    border-radius: 50%;
+    box-shadow:  5px 5px -10px var(--shadow2),
+                 -5px -5px 10px var(--white);
+
+}
+#name{
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height:450px;
+}
+#email{
+    margin-top: -50px;
+    font-size: 40px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height:450px;
+}
+.activelogin{
+    animation: loginslide 4s;
+    left:-400px
+
+}
+@keyframes loginslide{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -400px;
+    }
+}
+.activeslide{
+    z-index: 1;
+    left: 400px;
+    animation: slideslide 4s;
+}
+@keyframes slideslide{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 400px;
+    }
+}
+.reverselogin{
+    left: 0px;
+    animation: reverselogin 4s;
+}
+@keyframes reverselogin{
+    0%{
+        left: -400px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+.reverseslide{
+    animation: reverseslide 4s;
+    z-index: 1;
+}
+@keyframes reverseslide{
+    0%{
+        left: 400px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+.log{
+    background-color: #ff0066;
+    font-weight: 600;
+    color: var(--white);
+    padding:5px 20px;
+    font-size:32px ;
+}
+.log:hover{
+    /* font-size: 33px; */
+    padding: 4px 20px;
+    letter-spacing:1px;
+    background-color: var(--white);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    z-index: 1;
+}
+.name_field{
+    width: 100%;
+    font-size:15px;
+    padding: 5px;
+    border: 1px solid white;
+    box-shadow: black;
+    color:var(--main-color);
+    border-radius: 25px;
+background: linear-gradient(145deg, var(--shadow1), var(--white));
+box-shadow:  5px 5px 10px var(--shadow2),
+             -5px -5px 10px var(--white);
+    padding-left: 20px;
+    margin-top: 25px;
+}
+.emailField{
+    width: 100%;
+    font-size:15px;
+    padding: 5px;
+    border: 1px solid white;
+    box-shadow: black;
+    color:var(--main-color);
+    border-radius: 25px;
+background: linear-gradient(145deg, var(--shadow1), var(--white));
+box-shadow:  5px 5px 10px var(--shadow2),
+             -5px -5px 10px var(--white);
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.password_field{
+    width: 100%;
+    font-size:15px;
+    padding: 5px;
+    border: 1px solid white;
+    box-shadow: black;
+    color:var(--main-color);
+    border-radius: 25px;
+background: linear-gradient(145deg, var(--shadow1), var(--white));
+box-shadow:  5px 5px 10px var(--shadow2),
+             -5px -5px 10px var(--white);
+    padding-left: 20px;
+    margin-top: 20px;
+
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+}
+.signin{
+    margin-top: 20px;
+}
+button{
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: var(--white);
+    padding: 5px 18px;
+    font-size: 16px;
+    border-radius:50px;
+    
+}
+button:hover{
+    color:var(--main-color);
+    background-color: var(--white);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.hiyo{
+    font-family: sans-serif;
+    font-weight: 600;
+    background-color: var(--main-color);
+    color: var(--white);
+    padding:5px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.end{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--main-color);
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+.end p{
+    padding: 5px 20px;
+    border-radius: 8px;
+    background: linear-gradient(225deg, #e6e6e6, #ffffff);
+    box-shadow:  -5px 5px 10px #c2c2c2,
+             5px -5px 10px #ffffff;
+}
+/* border-radius: 0px;
+background: linear-gradient(225deg, #e6e6e6, #ffffff);
+box-shadow:  -5px 5px 10px #c2c2c2,
+             5px -5px 10px #ffffff; */

@@ -1,6 +1,4 @@
-/* var sheet =document.styleSheets[0];
-sheet.insertRule(":root{--white:white}");
-element.style.setProperty("--white",'#000') */
+
 let login=document.querySelector('.login')
 let slide=document.querySelector('.slide')
 let name=document.getElementById('name')

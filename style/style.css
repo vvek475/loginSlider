@@ -154,7 +154,7 @@ body{
     padding: 5px;
     border: 1px solid white;
     box-shadow: black;
-    color:var(--main-color);
+    color:gray;
     border-radius: 25px;
 background: linear-gradient(145deg, var(--shadow1), var(--white));
 box-shadow:  5px 5px 10px var(--shadow2),
@@ -168,7 +168,7 @@ box-shadow:  5px 5px 10px var(--shadow2),
     padding: 5px;
     border: 1px solid white;
     box-shadow: black;
-    color:var(--main-color);
+    color:gray;
     border-radius: 25px;
 background: linear-gradient(145deg, var(--shadow1), var(--white));
 box-shadow:  5px 5px 10px var(--shadow2),
@@ -182,7 +182,7 @@ box-shadow:  5px 5px 10px var(--shadow2),
     padding: 5px;
     border: 1px solid white;
     box-shadow: black;
-    color:var(--main-color);
+    color:gray;
     border-radius: 25px;
 background: linear-gradient(145deg, var(--shadow1), var(--white));
 box-shadow:  5px 5px 10px var(--shadow2),
@@ -190,6 +190,9 @@ box-shadow:  5px 5px 10px var(--shadow2),
     padding-left: 20px;
     margin-top: 20px;
 
+}
+.name_field:hover,.password_field:hover,.emailField:hover{
+    color:var(--main-color)
 }
 .btns{
     display: flex;
@@ -223,24 +226,27 @@ button:hover{
     padding:5px 20px;
     font-size: 20px;
     margin-top: 20px;
+    border: 1px solid var(--main-color);
+}
+.hiyo:hover{
+    color: var(--main-color);
+    background-color: white;
+    border: 1px solid var(--main-color);
 }
 .end{
     display: flex;
     height: 200px;
     justify-content: center;
     align-items: flex-end;
-    color: var(--main-color);
+    color: grey;
     font-size: 25px;
     font-family: sans-serif;
     font-weight: 600;
     
 }
 .end p{
-    padding: 5px 20px;
-    border-radius: 8px;
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-    box-shadow:  -5px 5px 10px #c2c2c2,
-             5px -5px 10px #ffffff;
+    color: var(--main-color);
+
 }
 /* border-radius: 0px;
 background: linear-gradient(225deg, #e6e6e6, #ffffff);

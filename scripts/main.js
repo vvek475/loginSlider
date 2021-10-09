@@ -1,8 +1,8 @@
 
-let login=document.querySelector('.login')
-let slide=document.querySelector('.slide')
-let name=document.getElementById('name')
-let email=document.getElementById('email')
+let login=document.querySelector('.userForm')
+let slide=document.querySelector('.sliderForm')
+let signinForm=document.getElementById('signinForm')
+let signupForm=document.getElementById('signupForm')
 var signin = document.querySelectorAll('.signin')
 let signup =document.querySelector('.signup')
 signin=[...signin]
@@ -14,8 +14,8 @@ signin2.addEventListener('click',function(e){
     slide.classList.remove('activeslide')
     login.classList.add('reverselogin')
     login.classList.remove('activelogin')
-    setTimeout('name.style.display="flex";',1800)
-    setTimeout('email.style.display="none";',1800)  
+    setTimeout('signinForm.style.display="flex";',1800)
+    setTimeout('signupForm.style.display="none";',1800)  
 // }
 })
 login.addEventListener('click',function(e){console.log('ok')})
@@ -24,6 +24,6 @@ signup.addEventListener('click',function(e){
         login.classList.remove('reverselogin')
         slide.classList.add('activeslide')
         slide.classList.remove('reverseslide')
-        setTimeout('name.style.display="none";',1800)
-        setTimeout('email.style.display="flex";',1800)
+        setTimeout('signinForm.style.display="none";',1800)
+        setTimeout('signupForm.style.display="flex";',1800)
 })

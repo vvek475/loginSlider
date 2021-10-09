@@ -10,6 +10,7 @@
     box-sizing: border-box;
     text-transform: capitalize;
     font-family: sans-serif;
+    outline: none;
 }
 html{
     background-color:var(--white);
@@ -21,12 +22,12 @@ body{
     align-items: center;
     justify-content: center;
 }
-.form{
+.container{
     display: flex;
     height: 500px;
     width: 800px;
 }
-.login{
+.userForm{
 
     height: 550px;
     width: 400px;
@@ -42,7 +43,7 @@ body{
     box-shadow:  -5px 5px 10px var(--shadow2),
              5px -5px 10px var(--white);
 }
-.slide{
+.sliderForm{
     position:relative;
     display: flex;
     align-items: center;
@@ -56,15 +57,12 @@ body{
     box-shadow:  -5px 5px 10px var(--shadow2),
              -5px -5px 10px var(--white);
 }
-.user{
+.formImage{
     position: relative;
     width: 15rem;
-    border-radius: 50%;
-    box-shadow:  5px 5px -10px var(--shadow2),
-                 -5px -5px 10px var(--white);
 
 }
-#name{
+#signinForm{
     margin-top: -50px;
     display: flex;
     flex-direction: column;
@@ -72,7 +70,7 @@ body{
     width: 300px;
     height:450px;
 }
-#email{
+#signupForm{
     margin-top: -50px;
     font-size: 40px;
     display: none;
@@ -99,22 +97,21 @@ body{
     z-index: 1;
 }
 
-.log{
+.formText{
     background-color: #ff0066;
     font-weight: 600;
     color: var(--white);
     padding:5px 20px;
     font-size:28px ;
 }
-.log:hover{
-    /* font-size: 33px; */
+.formText:hover{
     padding: 4px 20px;
     letter-spacing:1px;
     background-color: var(--white);
     color: var(--main-color);
     border: 1px solid var(--main-color);
 }
-.name_field{
+.nameField{
     width: 100%;
     font-size:15px;
     padding: 5px;
@@ -142,7 +139,7 @@ box-shadow:  5px 5px 10px var(--shadow2),
     padding-left: 20px;
     margin-top: 20px;
 }
-.password_field{
+.passwordField{
     width: 100%;
     font-size:15px;
     padding: 5px;
@@ -157,7 +154,7 @@ box-shadow:  5px 5px 10px var(--shadow2),
     margin-top: 20px;
 
 }
-.name_field:hover,.password_field:hover,.emailField:hover{
+.nameField:hover,.passwordField:hover,.emailField:hover{
     color:var(--main-color)
 }
 .btns{
@@ -181,25 +178,25 @@ button{
 button:hover{
     color:var(--main-color);
     background-color: var(--white);
-    letter-spacing: 1px;
-    font-size: 18px;
+    line-height: 20px;
 }
-.hiyo{
+.sliderText{
     font-family: sans-serif;
     font-weight: 600;
     background-color: var(--main-color);
     color: var(--white);
     padding:5px 20px;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 20px;
     border: 1px solid var(--main-color);
 }
-.hiyo:hover{
+.sliderText:hover{
+    letter-spacing: 1px;
     color: var(--main-color);
     background-color: white;
     border: 1px solid var(--main-color);
 }
-.end{
+.credits{
     position: relative;
     display: flex;
     height: 100px;
@@ -211,7 +208,7 @@ button:hover{
     font-weight: 600;
     
 }
-.typer{
+.typerEffect{
     margin-left: -50% translate(50%);
     height: 30px;
     background-color: white;
@@ -220,7 +217,7 @@ button:hover{
     z-index:1;
     overflow: hidden;
 }
-.end p{ 
+.credits p{ 
     color: var(--main-color);
 }
 /* border-radius: 0px;
@@ -228,53 +225,61 @@ background: linear-gradient(225deg, #e6e6e6, #ffffff);
 box-shadow:  -5px 5px 10px #c2c2c2,
              5px -5px 10px #ffffff; */
 @media (max-width:575px){
-    .form{
+    .container{
         width: 100vw;
         align-items: center;
     }
-    .login{
+    .userForm{
+        height: 250px;
+        width: 50%;
+    }
+    .sliderForm{
         height:250px;
         width: 50%;
     }
-    .slide{
-        height:250px;
-        width: 50%;
-    }
-    .user{
+    .formImage{
         
         display: none;
     }
-    #name,#email{
+    #signinForm,#signupForm{
         width: 100%;
     }
-    #name p,#email p{
+    #signinForm input,#signupForm input{
         width: 80%;
         font-size: 10px;
     }
-    #name div button,#email div button{
+    #signinForm div button,#signupForm div button{
         padding: 2px 10px;
         font-size: 10px;
     }
-    #name h4,#email h4{
+    #signinForm h4,#signupForm h4{
         margin-top: 80px;
         font-size: 15px;
     }
-    #name h4:hover,#email h4:hover{
+    #signinForm h4:hover,#signupForm h4:hover{
         letter-spacing: 0px;
     }
-    .slide img{
+    .sliderForm img{
         width: 100px;
         height: 120px;
     }
-    .hiyo{
+    .sliderText{
         font-size: 12px;
     }
     .btns{
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
     .signup{
-        margin-left: 20px;
+        position: relative;
         margin-top: 20px;
+        margin-left: 20px;
         height: 18px;
+    }
+    .signin{
+        margin-left: 20px;
+        height: 18px;
+
     }
 }
